@@ -20,6 +20,7 @@
 ; 
 ; lib/syslib.s : システムコールに関するユーザ用ライブラリを集めたファイル
 ;
+; 2017.01.25 : システムコール名を変更（getPS2 -> getKey）
 ; 2017.01.11 : comTec システムコールを削除
 ; 2016.10.28 : comTec，putSIO，getSIO，getPS2 システムコールを追加
 ; 2016.02.27 : _exit を __exit に変更
@@ -52,7 +53,7 @@ _errno  dw      0           ; エラー番号
 ; 14     conWrite
 ; 15     putSIO
 ; 16     getSIO
-; 17     getPS2
+; 17     getKey
 ; 18     malloc
 ; 19     free
 
@@ -188,7 +189,7 @@ _getSIO
        ld       g0,#16          ; G0 にシステムコール番号を格納
        jmp      .l0
 
-_getPS2
+_getKey
        ld       g0,#17          ; G0 にシステムコール番号を格納
        jmp      .l0
 

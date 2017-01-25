@@ -22,6 +22,7 @@
 /*
  * include/syslib.hmm : lib/syslib.s の外部インタフェース
  *
+ * 2017.01.25 : システムコール名を変更（getPS2 -> getKey）
  * 2017.01.11 : comTec システムコールを削除
  * 2016.10.28 : comTec，putSIO，getSIO，getPS2 システムコールを追加
  * 2016.02.27 : exit を _exit に変更
@@ -53,4 +54,4 @@ public int conRead(char[] buf, int len);
 public int conWrite(char[] buf);
 public int putSIO(int c);
 public int getSIO();
-public int getPS2();
+public int getKey();
